@@ -25,13 +25,27 @@ st.markdown("""
     .main-header {
         font-size: 3.5rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
         text-align: center;
         margin-bottom: 2rem;
         text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .main-header .icon {
+        color: #ff6b6b;
+        font-size: 3.5rem;
+    }
+
+    .main-header .title {
+        background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 3.5rem;
+        font-weight: 700;
     }
 
     .sub-header {
@@ -183,7 +197,7 @@ def main():
         st.session_state.model_trained = False
     
     # Header
-    st.markdown('<h1 class="main-header">📩 Spam Detection System Using NLP</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header"><span class="icon">📩</span><span class="title">Spam Detection System Using NLP</span></h1>', unsafe_allow_html=True)
 
     # Sidebar for navigation with icons
     st.sidebar.markdown("""
